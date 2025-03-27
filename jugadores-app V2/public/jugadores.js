@@ -1,20 +1,25 @@
-window.addEventListener('DOMContentLoaded', async () => {
+import { socket } from './socket-client.js';
+
+async function cargarJugadores() {
     try {
         const response = await fetch('/obtener-jugadores');
-        if (response.ok) {
-            const jugadores = await response.json();
-            const jugadoresList = document.getElementById('jugadores-list');
+        const jugadores = await response.json();
+        const jugadoresList = document.getElementById('jugadores-list');
+        jugadoresList.innerHTML = '';
 
-            jugadores.forEach(jugador => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `<h3>${jugador.nombre} (${jugador.media})</h3>`;
-                jugadoresList.appendChild(card);
-            });
-        } else {
-            alert('Error al cargar los jugadores.');
-        }
+        jugadores.forEach(jugador => {
+            const card = document.createElement('div');
+            card.className = 'jugador-card';
+            card.innerHTML = `
+                <h3>${jugador.nombre}</h3>
+                <p>Media: <strong>${jugador.media}</strong></p>
+            `;
+            jugadoresList.appendChild(card);
+        });
     } catch (error) {
-        alert('Error: ' + error.message);
+        console.error('Error al cargar jugadores:', error);
     }
-});
+}
+
+window.addEventListener('DOMContentLoaded', cargarJugadores);
+window.addEventListener('nuevoJugadorRecibido', cargarJugadores);

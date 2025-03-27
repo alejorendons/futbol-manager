@@ -21,17 +21,19 @@
                 <h2>Equipo 1</h2>
                 <ul id="jugadoresEquipo1"></ul>
                 <p id="mediaEquipo1"></p>
-                <p id="quimicaEquipo1"></p>
             </div>
             <div id="equipo2" class="equipo">
                 <h2>Equipo 2</h2>
                 <ul id="jugadoresEquipo2"></ul>
                 <p id="mediaEquipo2"></p>
-                <p id="quimicaEquipo2"></p>
             </div>
         </div>
     </div>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script src="equipos.js"></script>
+    <div id="socket-status-container">
+        Estado: <span id="socket-status">Conectando...</span>
+    </div>
 </body>
 </html>

@@ -6,72 +6,77 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e5e5e5; /* Color gris claro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #f5f5f5;
     min-height: 100vh;
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #004d00; /* Verde oscuro */
-    margin-bottom: 20px;
-}
-
 .jugadores-container {
-    background-color: #fff; /* Blanco para el contenedor de jugadores */
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    background-color: #fff;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jugadores-container h1 {
+    color: #2c3e50;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-#jugadores-list {
-    display: flex;
-    flex-wrap: wrap;
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.card {
-    background-color: #007bff; /* Azul para las tarjetas de jugadores */
+.jugador-card {
+    background-color: #3498db;
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(25% - 20px); /* Se ajusta para mantener espacio entre las tarjetas */
-    min-width: 250px; /* Ancho mínimo para mantener legibilidad */
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
+.jugador-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card h3 {
-    font-size: 20px;
+.jugador-card h3 {
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
 .secondary-button {
-    background-color: #6c757d; /* Gris para los botones secundarios */
-    color: #fff;
-    padding: 10px 15px;
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px 20px;
+    background-color: #7f8c8d;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 .secondary-button:hover {
-    background-color: #5a6268; /* Gris más oscuro para hover */
+    background-color: #95a5a6;
+}
+
+#socket-status-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
 }

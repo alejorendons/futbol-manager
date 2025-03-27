@@ -1,27 +1,28 @@
-document.getElementById('playerForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+import { socket } from './socket-client.js';
 
+document.getElementById('playerForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
     const nombre = document.getElementById('nombre').value;
     const media = document.getElementById('media').value;
-
-    const data = { nombre, media };
 
     try {
         const response = await fetch('/guardar-jugador', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({ nombre, media })
         });
 
         if (response.ok) {
-            alert('Jugador guardado exitosamente.');
+            alert('Jugador guardado exitosamente');
             document.getElementById('playerForm').reset();
         } else {
-            alert('Hubo un problema al guardar el jugador.');
+            alert('Error al guardar jugador');
         }
     } catch (error) {
-        alert('Error: ' + error.message);
+        console.error('Error:', error);
+        alert('Error de conexión');
     }
 });

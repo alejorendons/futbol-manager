@@ -8,11 +8,17 @@
 </head>
 <body>
     <div class="jugadores-container">
-        <h2>Lista de Jugadores</h2>
-        <div id="jugadores-list"></div>
-        <button onclick="window.location.href='formulario.html'" class="secondary-button">Volver al Formulario</button>
+        <h1>Lista de Jugadores</h1>
+        <div id="jugadores-list" class="jugadores-grid"></div>
+        <button onclick="window.location.href='formulario.html'" class="secondary-button">
+            Volver al Formulario
+        </button>
     </div>
 
-    <script src="jugadores.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="jugadores.js"></script>
+    <div id="socket-status-container">
+        Estado: <span id="socket-status">Conectando...</span>
+    </div>
 </body>
 </html>

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Jugadores</title>
-    <link rel="stylesheet" href="formulario.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
     <div class="form-container">
-      <h2>Agregar Jugador</h2>
-      <form id="playerForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
+        <h2>Agregar Jugador</h2>
+        <form id="playerForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-        <label for="media">Media Global:</label>
-        <input type="number" id="media" name="media" required />
+            <label for="media">Media Global:</label>
+            <input type="number" id="media" name="media" required>
 
-        <button type="submit">Guardar</button>
-      </form>
+            <button type="submit">Guardar</button>
+        </form>
 
-      <button
-        onclick="window.location.href='jugadores.html'"
-        class="secondary-button"
-      >
-        Ver Jugadores
-      </button>
+        <button onclick="window.location.href='jugadores.html'" class="secondary-button">
+            Ver Jugadores
+        </button>
     </div>
 
-    <script src="formulario.js"></script>
-  </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="formulario.js"></script>
+    <div id="socket-status-container">
+        Estado: <span id="socket-status">Conectando...</span>
+    </div>
+</body>
 </html>

@@ -14,8 +14,69 @@
             <button onclick="window.location.href='formulario.html'">Ingresar Jugadores</button>
             <button onclick="window.location.href='jugadores.html'">Ver Jugadores Ingresados</button>
             <button onclick="window.location.href='equipos.html'">Generar Partidos</button>
-
         </div>
+
+        <!-- Área de notificaciones en tiempo real -->
+        <div id="notifications" class="notifications-container">
+            <h3>Notificaciones en Tiempo Real</h3>
+            <ul id="notification-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Configuración persistente entre páginas
+        if (!window.socketInitialized) {
+            window.socketInitialized = true;
+            window.socketPreserveState = true;
+            
+            // Preservar estado al cambiar de página
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'hidden') {
+                    window.socketPreserveState = true;
+                }
+            });
+        }
+        </script>
+
+    <!-- Socket.IO y cliente de socket -->
+    <script>
+        // Preservar el estado de Socket.IO durante la navegación
+        window.addEventListener('beforeunload', () => {
+            sessionStorage.setItem('socketPreserve', 'true');
+        });
+        </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module">
+        import { socket } from '/socket-client.js';
+
+        const notificationList = document.getElementById('notification-list');
+
+        socket.on('nuevo-jugador', (jugador) => {
+            const notificationItem = document.createElement('li');
+            notificationItem.textContent = `Nuevo jugador agregado: ${jugador.nombre} (Media: ${jugador.media})`;
+            notificationList.appendChild(notificationItem);
+
+            if (notificationList.children.length > 5) {
+                notificationList.removeChild(notificationList.firstChild);
+            }
+        });
+
+        socket.on('connect', () => {
+            const connectionItem = document.createElement('li');
+            connectionItem.textContent = `Conectado al servidor en ${new Date().toLocaleString()}`;
+            notificationList.appendChild(connectionItem);
+        });
+
+        socket.on('disconnect', () => {
+            const disconnectionItem = document.createElement('li');
+            disconnectionItem.textContent = `Desconectado del servidor en ${new Date().toLocaleString()}`;
+            notificationList.appendChild(disconnectionItem);
+        });
+    </script>
+
+    <!-- Indicador de estado de conexión -->
+    <div id="socket-status-container" style="position: fixed; bottom: 10px; right: 10px;">
+        Estado: <span id="socket-status">Conectando...</span>
     </div>
 </body>
 </html>
