@@ -11,7 +11,7 @@
 ## 🛠️ Instalación y Configuración
 1. Clona este repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/futbol-manager.git
+   git clone https://github.com/alejorendons/futbol-manager
    cd futbol-manager
    ```
 2. Instala las dependencias:
