@@ -1,0 +1,17 @@
+Nombre: Brayan, Media Global: 93
+Nombre: Julián, Media Global: 90
+Nombre: Miguel, Media Global: 90
+Nombre: Sebas, Media Global: 89
+Nombre: Milton, Media Global: 89
+Nombre: Chepe, Media Global: 89
+Nombre: Loaiza, Media Global: 89
+Nombre: Bombi, Media Global: 86
+Nombre: Juanda, Media Global: 86
+Nombre: Ospina, Media Global: 85
+Nombre: Juanes, Media Global: 85
+Nombre: Diego, Media Global: 84
+Nombre: Sandey, Media Global: 83
+Nombre: Pochero, Media Global: 83
+Nombre: Vindy, Media Global: 83
+Nombre: Bedoya, Media Global: 83
+Nombre: Mincho, Media Global: 80

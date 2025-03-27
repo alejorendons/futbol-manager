@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5; /* Color gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #004d00; /* Verde oscuro */
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #fff; /* Blanco para el formulario */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Color gris oscuro */
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745; /* Verde para el botón de envío */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838; /* Verde más oscuro para hover */
+}
+
+.secondary-button {
+    background-color: #6c757d; /* Gris para los botones secundarios */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268; /* Gris más oscuro para hover */
+}
+
+textarea {
+    resize: vertical;
+}

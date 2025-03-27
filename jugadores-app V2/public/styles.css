@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5; /* Color gris claro como el césped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000; /* Texto negro */
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #004d00; /* Verde oscuro como el campo de fútbol */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #28a745; /* Verde similar a los uniformes */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Verde más oscuro para hover */
+}
+
+.jugadores-container {
+    background-color: #fff; /* Blanco para el contenedor de jugadores */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa el ancho completo de la página */
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Distribuye las tarjetas en una cuadrícula automática */
+    gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    background-color: #007bff; /* Azul para las tarjetas de jugadores */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.selected {
+    border: 2px solid #0056b3; /* Azul más oscuro para tarjetas seleccionadas */
+}
+
+
+.secondary-button {
+    background-color: #6c757d; /* Gris para los botones secundarios */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268; /* Gris más oscuro para hover */
+}
+
+.welcome-container {
+    background-color: #fff; /* Blanco para el contenedor de bienvenida */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.welcome-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #004d00; /* Verde oscuro como el campo de fútbol */
+}
+
+.welcome-container p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container button {
+    background-color: #007bff; /* Azul para los botones principales */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3; /* Azul más oscuro para hover */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #004d00; /* Verde oscuro para el título principal */
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botones button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.botones button:hover {
+    background-color: #0056b3;
+}
+
+.equipos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.equipo {
+    background-color: #fff; /* Blanco para las secciones de equipos */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.equipo h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.equipo ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.equipo ul li {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.equipo p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
