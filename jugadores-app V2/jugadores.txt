@@ -16,4 +16,4 @@ Nombre: Vindy, Media Global: 83
 Nombre: Bedoya, Media Global: 83
 Nombre: Mincho, Media Global: 80
 
-hola milton
+hola diego
